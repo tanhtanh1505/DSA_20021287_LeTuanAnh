@@ -1,7 +1,5 @@
 package Week2;
 
-import javax.imageio.ImageTranscoder;
-
 public class IntroJavaH30 {
     public static void main(String[] args) {
         double[] a = new double[5];
