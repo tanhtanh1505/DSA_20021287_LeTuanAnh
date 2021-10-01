@@ -32,4 +32,6 @@ public class Pairs {
         System.out.println(pairs(2,arr));
     }
 }
-//Do phuc tap thuat toan: N
+//Worst Case: 2*N
+//Best Case: N
+//Avg Case: ~N*3/2

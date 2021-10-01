@@ -33,5 +33,6 @@ public class BinarySearch {
         System.out.println(binarySearch(a, 1));
     }
 }
-//Do phuc tap tot nhat cho bai toan nay: LogN
-//Do phuc tap te nhat: N (dung 1 vong for duyet tu dau den cuoi)
+//Worst Case: LogN
+//Best Case: 1
+//Avg Case: ~LogN

@@ -41,5 +41,6 @@ public class NewYearChaos {
         minimumBribes(arr);
     }
 }
-//Day la thuat toan co do phuc tap tot nhat: N
-//Do phuc tap te nhat voi bai nay: ~N^2
+//Worst Case: N
+//Best Case: N
+//Avg Case: N

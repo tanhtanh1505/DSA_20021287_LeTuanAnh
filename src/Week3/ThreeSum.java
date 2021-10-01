@@ -43,4 +43,6 @@ public class ThreeSum {
     }
 }
 
-//Day la thuat toan ThreeSum co do phuc tap te nhat: N^3
+//Worst Case: ~N^3
+//Best Case: ~N^3
+//Avg Case: ~N^3

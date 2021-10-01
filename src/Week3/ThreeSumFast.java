@@ -50,4 +50,6 @@ public class ThreeSumFast {
         StdOut.println(count);
     }
 }
-//Day la thuat toan ThreeSum co do phuc tap trung binh N^2.LogN
+//Worst Case: N^2.LogN
+//Best Case: N^2
+//Avg Case: ~N^2.LogN

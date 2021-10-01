@@ -29,5 +29,6 @@ public class ClosestNumbers {
         closestNumbers(arr);
     }
 }
-//Do phuc tap tot nhat: N
-//Do phuc tap trung binh: N
+//Worst Case: N
+//Best Case: N
+//Avg Case: N

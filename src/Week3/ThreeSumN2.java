@@ -36,4 +36,7 @@ public class ThreeSumN2 {
         StdOut.println(count);
     }
 }
-//Day la thuat toan ThreeSum co do phuc tap tot nhat: N^2
+
+//Worst Case: N^2
+//Best Case: N*N/2
+//Avg Case: ~N^2

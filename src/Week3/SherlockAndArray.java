@@ -31,4 +31,6 @@ public class SherlockAndArray {
     }
 }
 
-//Do phuc tap thuat toan: N
+//Worst Case: N
+//Best Case: 1
+//Avg Case: ~N/2
