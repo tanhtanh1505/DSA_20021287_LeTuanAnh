@@ -30,3 +30,5 @@ public class SherlockAndArray {
         System.out.println(balancedSums(arr));
     }
 }
+
+//Do phuc tap thuat toan: N

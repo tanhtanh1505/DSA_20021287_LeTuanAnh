@@ -32,3 +32,4 @@ public class Pairs {
         System.out.println(pairs(2,arr));
     }
 }
+//Do phuc tap thuat toan: N

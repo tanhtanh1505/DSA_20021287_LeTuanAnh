@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class BinarySearch {
     public static int binarySearch(int[] a, int number) {
+        Arrays.sort(a);
         return bSearch(a, 0, a.length - 1, number);
     }
 
@@ -29,7 +30,8 @@ public class BinarySearch {
         for(int i = 0; i < n; i++){
             a[i] = sc.nextInt();
         }
-        Arrays.sort(a);
         System.out.println(binarySearch(a, 1));
     }
 }
+//Do phuc tap tot nhat cho bai toan nay: LogN
+//Do phuc tap te nhat: N (dung 1 vong for duyet tu dau den cuoi)

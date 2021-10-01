@@ -13,13 +13,13 @@ public class ThreeSumN2 {
         for(int i = 0; i < a.length-1; i++){
             int l = i+1, r = a.length-1;
             while(l < r){
-                if(a[i] + l + r == 0){
+                if(a[i] + a[l] + a[r] == 0){
                     //System.out.println(a[i] + " " + l + " " + r);
                     count++;
                     l++;
                     r--;
                 }
-                else if(a[i] + l + r > 0){
+                else if(a[i] + a[l] + a[r] > 0){
                     r--;
                 }
                 else l++;
@@ -36,3 +36,4 @@ public class ThreeSumN2 {
         StdOut.println(count);
     }
 }
+//Day la thuat toan ThreeSum co do phuc tap tot nhat: N^2
