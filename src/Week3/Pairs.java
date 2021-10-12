@@ -32,6 +32,6 @@ public class Pairs {
         System.out.println(pairs(2,arr));
     }
 }
-//Worst Case: 2*N
-//Best Case: N
-//Avg Case: ~N*3/2
+//Worst Case: NlogN
+//Best Case: NlogN
+//Avg Case: NlogN

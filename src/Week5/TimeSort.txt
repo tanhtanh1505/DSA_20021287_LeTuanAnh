@@ -1,0 +1,4 @@
+Elapsed time selection sort:
+16Kints: ~0.12
+8Kints: ~0.04
+4Kints: ~0.02
