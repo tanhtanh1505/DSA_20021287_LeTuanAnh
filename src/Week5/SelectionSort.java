@@ -5,15 +5,15 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.Stopwatch;
 
 public class SelectionSort {
-    public static void sort(int[] a)
-    {
+    public static void sort(int[] a) {
         int N = a.length;
-        for (int i = 0; i < N - 1; i++)
-        {
+        for (int i = 0; i < N - 1; i++) {
             int min = i;
-            for (int j = i+1; j < N; j++)
-                if (a[j] < a[min])
+            for (int j = i+1; j < N; j++) {
+                if (a[j] < a[min]) {
                     min = j;
+                }
+            }
             int swap = a[i];
             a[i] = a[min];
             a[min] = swap;
