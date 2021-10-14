@@ -11,15 +11,11 @@ public class LinkedQueue<Item> implements Iterable<Item> {
     private Node first;    // beginning of queue
     private Node last;     // end of queue
 
-    // helper linked list class
     private class Node {
         private Item item;
         private Node next;
     }
 
-    /**
-     * Initializes an empty queue.
-     */
     public LinkedQueue() {
         first = null;
         last  = null;
@@ -27,36 +23,19 @@ public class LinkedQueue<Item> implements Iterable<Item> {
         assert check();
     }
 
-    /**
-     * Is this queue empty?
-     * @return true if this queue is empty; false otherwise
-     */
     public boolean isEmpty() {
         return first == null;
     }
 
-    /**
-     * Returns the number of items in this queue.
-     * @return the number of items in this queue
-     */
     public int size() {
         return n;
     }
 
-    /**
-     * Returns the item least recently added to this queue.
-     * @return the item least recently added to this queue
-     * @throws java.util.NoSuchElementException if this queue is empty
-     */
     public Item peek() {
         if (isEmpty()) throw new NoSuchElementException("Queue underflow");
         return first.item;
     }
 
-    /**
-     * Adds the item to this queue.
-     * @param item the item to add
-     */
     public void enqueue(Item item) {
         Node oldlast = last;
         last = new Node();
@@ -68,11 +47,6 @@ public class LinkedQueue<Item> implements Iterable<Item> {
         assert check();
     }
 
-    /**
-     * Removes and returns the item on this queue that was least recently added.
-     * @return the item on this queue that was least recently added
-     * @throws java.util.NoSuchElementException if this queue is empty
-     */
     public Item dequeue() {
         if (isEmpty()) throw new NoSuchElementException("Queue underflow");
         Item item = first.item;
@@ -83,10 +57,6 @@ public class LinkedQueue<Item> implements Iterable<Item> {
         return item;
     }
 
-    /**
-     * Returns a string representation of this queue.
-     * @return the sequence of items in FIFO order, separated by spaces
-     */
     public String toString() {
         StringBuilder s = new StringBuilder();
         for (Item item : this)
@@ -132,11 +102,6 @@ public class LinkedQueue<Item> implements Iterable<Item> {
         return true;
     }
 
-
-    /**
-     * Returns an iterator that iterates over the items in this queue in FIFO order.
-     * @return an iterator that iterates over the items in this queue in FIFO order
-     */
     public Iterator<Item> iterator()  {
         return new LinkedIterator();
     }
@@ -156,12 +121,6 @@ public class LinkedQueue<Item> implements Iterable<Item> {
         }
     }
 
-
-    /**
-     * Unit tests the {@code LinkedQueue} data type.
-     *
-     * @param args the command-line arguments
-     */
     public static void main(String[] args) {
         LinkedQueue<String> queue = new LinkedQueue<String>();
         while (!StdIn.isEmpty()) {

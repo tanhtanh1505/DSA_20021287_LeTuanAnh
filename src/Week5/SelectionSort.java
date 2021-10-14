@@ -2,6 +2,7 @@ package Week5;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
 public class SelectionSort {
@@ -23,11 +24,25 @@ public class SelectionSort {
     public static void main(String[] args) {
         In in = new In("..\\..\\Algs4\\datatest\\4Kints.txt");
         int[] a = in.readAllInts();
-        Stopwatch timer = new Stopwatch();
+//        Stopwatch timer = new Stopwatch();
+//        sort(a);
+//        StdOut.println("elapsed time = " + timer.elapsedTime());
+
+        Stopwatch timer2 = new Stopwatch();
+        for (int i = 1;i <= 100;i++)
+        {
+            int x;
+            int y;
+            do
+            {
+                x = StdRandom.uniform(31999);
+                y = StdRandom.uniform(31999);
+            } while (x != y);
+            int temp = a[x];
+            a[x] = a[y];
+            a[y] = temp;
+        }
         sort(a);
-        StdOut.println("elapsed time = " + timer.elapsedTime());
-//        for(int i = 0; i< a.length; i++){
-//            System.out.println(a[i]);
-//        }
+        StdOut.println("elapsed time = " + timer2.elapsedTime());
     }
 }
