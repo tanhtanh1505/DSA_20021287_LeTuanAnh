@@ -6,9 +6,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
 import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class TestTimeSort {
     static String path = "..\\..\\Algs4\\datatest\\32Kints.txt";
@@ -17,18 +15,12 @@ public class TestTimeSort {
         In in = new In(path);
         int[] a = in.readAllInts();
 
-        for (int i = 1;i < a.length/2 ;i++)
+        for (int i = 0;i < a.length ;i++)
         {
-            int x;
-            int y;
-            do
-            {
-                x = StdRandom.uniform(a.length - 1);
-                y = StdRandom.uniform(a.length -1);
-            } while (x != y);
+            int x = StdRandom.uniform(i + 1);
             int temp = a[x];
-            a[x] = a[y];
-            a[y] = temp;
+            a[x] = a[i];
+            a[i] = temp;
         }
 
         return a;
@@ -96,7 +88,6 @@ public class TestTimeSort {
         start = System.currentTimeMillis();
         MergeSort.sort(a);
         StdOut.println("elapsed time = " + (System.currentTimeMillis() - start));
-
 
     }
 }
