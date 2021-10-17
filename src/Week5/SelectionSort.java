@@ -22,27 +22,29 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        In in = new In("..\\..\\Algs4\\datatest\\4Kints.txt");
+        In in = new In("..\\..\\Algs4\\datatest\\16Kints.txt");
         int[] a = in.readAllInts();
-//        Stopwatch timer = new Stopwatch();
-//        sort(a);
-//        StdOut.println("elapsed time = " + timer.elapsedTime());
-
-        Stopwatch timer2 = new Stopwatch();
-        for (int i = 1;i <= 100;i++)
-        {
-            int x;
-            int y;
-            do
-            {
-                x = StdRandom.uniform(31999);
-                y = StdRandom.uniform(31999);
-            } while (x != y);
-            int temp = a[x];
-            a[x] = a[y];
-            a[y] = temp;
-        }
+        Stopwatch timer = new Stopwatch();
         sort(a);
-        StdOut.println("elapsed time = " + timer2.elapsedTime());
+        StdOut.println("elapsed time = " + timer.elapsedTime());
+
+//        In in2 = new In("..\\..\\Algs4\\datatest\\16Kints.txt");
+//        int[] b = in2.readAllInts();
+//        Stopwatch timer2 = new Stopwatch();
+//        for (int i = 1;i <= 100;i++)
+//        {
+//            int x;
+//            int y;
+//            do
+//            {
+//                x = StdRandom.uniform(b.length - 1);
+//                y = StdRandom.uniform(b.length -1);
+//            } while (x != y);
+//            int temp = b[x];
+//            b[x] = b[y];
+//            b[y] = temp;
+//        }
+//        sort(b);
+//        StdOut.println("elapsed time = " + timer2.elapsedTime());
     }
 }
