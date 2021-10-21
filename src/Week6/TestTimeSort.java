@@ -62,31 +62,31 @@ public class TestTimeSort {
     }
 
     public static void main(String[] args) {
-        //MergeSort
+        //QuickSort
         In in = new In(path);
         int[] a = in.readAllInts();
         long start = System.currentTimeMillis();
-        MergeSort.sort(a);
+        QuickSort.sort(a);
         StdOut.println("elapsed time = " + (System.currentTimeMillis() - start));
 
         a = TaoDuLieuNgauNhien();
         start = System.currentTimeMillis();
-        MergeSort.sort(a);
+        QuickSort.sort(a);
         StdOut.println("elapsed time = " + (System.currentTimeMillis() - start));
 
         a = TaoDuLieuXepTangDan();
         start = System.currentTimeMillis();
-        MergeSort.sort(a);
+        QuickSort.sort(a);
         StdOut.println("elapsed time = " + (System.currentTimeMillis() - start));
 
         a = TaoDuLieuXepGiamDan();
         start = System.currentTimeMillis();
-        MergeSort.sort(a);
+        QuickSort.sort(a);
         StdOut.println("elapsed time = " + (System.currentTimeMillis() - start));
 
         a = TaoDuLieuBangNhau();
         start = System.currentTimeMillis();
-        MergeSort.sort(a);
+        QuickSort.sort(a);
         StdOut.println("elapsed time = " + (System.currentTimeMillis() - start));
 
     }
