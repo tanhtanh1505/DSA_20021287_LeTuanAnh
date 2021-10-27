@@ -17,7 +17,7 @@ public class QuickSort {
             while (less(array[++i], v))
                 if (i == hi) break;
             while (less(v, array[--j]))
-                if (i == lo) break;
+                if (j == lo) break;
             if (i >= j) break;
             exch(array, i, j);
         }
