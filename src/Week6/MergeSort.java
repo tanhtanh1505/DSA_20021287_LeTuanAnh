@@ -3,6 +3,8 @@ package Week6;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.Arrays;
+
 public class MergeSort {
     private MergeSort() { }
 
@@ -23,7 +25,6 @@ public class MergeSort {
             else if (less(aux[j], aux[i])) a[k] = aux[j++];
             else                           a[k] = aux[i++];
         }
-
         assert isSorted(a, lo, hi);
     }
     private static void sort(int[] a, int[] aux, int lo, int hi) {
