@@ -6,11 +6,9 @@ public class Heap {
     public void sort(Comparable[] pq) {
         int n = pq.length;
 
-        // heapify phase
         for (int k = n/2; k >= 1; k--)
             sink(pq, k, n);
 
-        // sortdown phase
         int k = n;
         while (k > 1) {
             exch(pq, 1, k--);
@@ -36,13 +34,6 @@ public class Heap {
         Object swap = pq[i-1];
         pq[i-1] = pq[j-1];
         pq[j-1] = swap;
-    }
-
-    // print array to standard output
-    private void show(Comparable[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
-        }
     }
 
 }
