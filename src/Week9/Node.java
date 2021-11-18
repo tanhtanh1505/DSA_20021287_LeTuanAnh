@@ -1,7 +1,11 @@
 package Week9;
 
 public class Node {
-    int data;
-    Week9.Node left;
-    Week9.Node right;
+    public int data;
+    public Node left;
+    public Node right;
+
+    public Node(int data) {
+        this.data = data;
+    }
 }
