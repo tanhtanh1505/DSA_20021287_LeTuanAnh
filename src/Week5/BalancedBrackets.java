@@ -1,6 +1,7 @@
 package Week5;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class BalancedBrackets {
     public static String isBalanced(String s) {
