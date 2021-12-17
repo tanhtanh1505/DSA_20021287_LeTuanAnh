@@ -1,14 +1,11 @@
 package Week12;
 
-import edu.princeton.cs.algs4.StdIn;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 public class BFS {
-
     private static Digraph digraph;
     private static int[] distTo;
     private static boolean[] visited;
@@ -18,7 +15,8 @@ public class BFS {
 
         public Digraph(int n, List<List<Integer>> edges) {
             adj = new List[n + 1];
-            for (int i = 0; i <= n; i++) adj[i] = new ArrayList<>();
+            for (int i = 0; i <= n; i++)
+                adj[i] = new ArrayList<>();
             for (int i = 0; i < edges.size(); i++) {
                 int x = edges.get(i).get(0);
                 int y = edges.get(i).get(1);
@@ -55,32 +53,14 @@ public class BFS {
         while (!q.isEmpty()) {
             int v = q.poll();
             for (Integer i : digraph.neighbor(v))
-                if (!visited[i])
-                {
+                if (!visited[i]) {
                     q.add(i);
                     visited[i] = true;
-                    if (distTo[v] + 6 < distTo[i])
-                    {
+                    if (distTo[v] + 6 < distTo[i]) {
                         distTo[i] = distTo[v] + 6;
                     }
-
                 }
         }
-    }
-
-    public static void main(String[] args) {
-        int n = StdIn.readInt();
-        int m = StdIn.readInt();
-        List<List<Integer>> edges = new ArrayList<>();
-        for (int i = 0; i < m; i++) {
-            List<Integer> temp = new ArrayList<>();
-            temp.add(StdIn.readInt());
-            temp.add(StdIn.readInt());
-            edges.add(temp);
-        }
-        int s = StdIn.readInt();
-        List<Integer> result = bfs(n, m, edges, s);
-        for (Integer i : result) System.out.println(i);
     }
 
 }
